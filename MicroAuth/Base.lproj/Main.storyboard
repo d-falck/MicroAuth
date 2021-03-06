@@ -15,6 +15,10 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="MicroAuth" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
+                                        <menuItem title="Item" id="rlh-4r-vuP">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="bMR-mE-Y28"/>
                                         <menuItem title="About MicroAuth" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -40,6 +44,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MicroAuth" customModuleProvider="target">
                     <connections>
+                        <outlet property="firstMenuItem" destination="rlh-4r-vuP" id="lL3-pT-bDV"/>
                         <outlet property="menu" destination="uQy-DD-JDr" id="9SW-yy-Uav"/>
                     </connections>
                 </customObject>
