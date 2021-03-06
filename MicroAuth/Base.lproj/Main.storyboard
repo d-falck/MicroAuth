@@ -15,10 +15,10 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="MicroAuth" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
+                                        <menuItem isSeparatorItem="YES" id="bMR-mE-Y28"/>
                                         <menuItem title="Item" id="rlh-4r-vuP">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="bMR-mE-Y28"/>
                                         <menuItem title="About MicroAuth" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -64,7 +64,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="74" y="262"/>
         </scene>
     </scenes>
 </document>

@@ -11,6 +11,8 @@
 		1232A2F225F3CAB5003DDBE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A2F125F3CAB5003DDBE8 /* ViewController.swift */; };
 		1232A2F425F3CAB7003DDBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1232A2F325F3CAB7003DDBE8 /* Assets.xcassets */; };
 		1232A2F725F3CAB7003DDBE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1232A2F525F3CAB7003DDBE8 /* Main.storyboard */; };
+		1232A31B25F3DD79003DDBE8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A31A25F3DD79003DDBE8 /* AuthView.swift */; };
+		1232A31E25F3DD89003DDBE8 /* AuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1232A31D25F3DD89003DDBE8 /* AuthView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		1232A2F625F3CAB7003DDBE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1232A2F825F3CAB7003DDBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1232A2F925F3CAB7003DDBE8 /* MicroAuth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MicroAuth.entitlements; sourceTree = "<group>"; };
+		1232A31A25F3DD79003DDBE8 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		1232A31D25F3DD89003DDBE8 /* AuthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		1232A2EE25F3CAB5003DDBE8 /* MicroAuth */ = {
 			isa = PBXGroup;
 			children = (
+				1232A31825F3DBFE003DDBE8 /* Custom Views */,
 				1232A2EF25F3CAB5003DDBE8 /* AppDelegate.swift */,
 				1232A2F125F3CAB5003DDBE8 /* ViewController.swift */,
 				1232A2F325F3CAB7003DDBE8 /* Assets.xcassets */,
@@ -61,6 +66,15 @@
 				1232A2F925F3CAB7003DDBE8 /* MicroAuth.entitlements */,
 			);
 			path = MicroAuth;
+			sourceTree = "<group>";
+		};
+		1232A31825F3DBFE003DDBE8 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				1232A31A25F3DD79003DDBE8 /* AuthView.swift */,
+				1232A31D25F3DD89003DDBE8 /* AuthView.xib */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +136,7 @@
 			files = (
 				1232A2F425F3CAB7003DDBE8 /* Assets.xcassets in Resources */,
 				1232A2F725F3CAB7003DDBE8 /* Main.storyboard in Resources */,
+				1232A31E25F3DD89003DDBE8 /* AuthView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +149,7 @@
 			files = (
 				1232A2F225F3CAB5003DDBE8 /* ViewController.swift in Sources */,
 				1232A2F025F3CAB5003DDBE8 /* AppDelegate.swift in Sources */,
+				1232A31B25F3DD79003DDBE8 /* AuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
