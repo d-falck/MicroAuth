@@ -15,7 +15,6 @@ class AuthView: NSView {
     
     var totp: TOTP!
     var timer: Timer!
-    let secret = base32DecodeToData("ryqdmbsppkhryjdp")!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -29,13 +28,12 @@ class AuthView: NSView {
     
     // Initialisation code to be run for any constructor
     func commonInit() {
-        // Load custom view from IB and add as subview
-        let nib = NSNib(nibNamed: "AuthView", bundle: nil)
-        nib!.instantiate(withOwner: self, topLevelObjects: nil)
-        contentView.frame = bounds
+        Bundle.main.loadNibNamed("AuthView", owner: self, topLevelObjects: nil)
         addSubview(contentView)
+        contentView.frame = self.bounds
         
         // Set up authentication provider and get initial update
+        let secret = base32DecodeToData("ryqdmbsppkhryjdp")!
         totp = TOTP(secret: secret, digits: 6, timeInterval: 30, algorithm: .sha1)
         updateCode()
     }
@@ -43,20 +41,20 @@ class AuthView: NSView {
     // Starts updating the code every 0.1s
     func startUpdating() {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateCode), userInfo: nil, repeats: true)
-        timer?.fire()
         RunLoop.current.add(timer!, forMode: .common)
     }
     
     // Stops continuously updating the code
     func stopUpdating() {
         timer?.invalidate()
-        timer = nil
     }
     
     // Updates the current authentication code
     @objc func updateCode() {
         let now = Date()
-        self.codeLabel.stringValue = totp.generate(time: now)!
+        if let code = totp.generate(time: now) {
+            self.codeLabel.stringValue = code
+        }
     }
     
     // Updates and returns the authentication code
