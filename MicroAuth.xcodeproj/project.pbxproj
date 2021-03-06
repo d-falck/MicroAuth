@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		1232A2F725F3CAB7003DDBE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1232A2F525F3CAB7003DDBE8 /* Main.storyboard */; };
 		1232A31B25F3DD79003DDBE8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A31A25F3DD79003DDBE8 /* AuthView.swift */; };
 		1232A31E25F3DD89003DDBE8 /* AuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1232A31D25F3DD89003DDBE8 /* AuthView.xib */; };
+		1232A32225F3E6DA003DDBE8 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = 1232A32125F3E6DA003DDBE8 /* SwiftOTP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1232A32225F3E6DA003DDBE8 /* SwiftOTP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,9 @@
 			dependencies = (
 			);
 			name = MicroAuth;
+			packageProductDependencies = (
+				1232A32125F3E6DA003DDBE8 /* SwiftOTP */,
+			);
 			productName = MicroAuth;
 			productReference = 1232A2EC25F3CAB5003DDBE8 /* MicroAuth.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 1232A2E325F3CAB5003DDBE8;
+			packageReferences = (
+				1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+			);
 			productRefGroup = 1232A2ED25F3CAB5003DDBE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1232A32125F3E6DA003DDBE8 /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1232A2E425F3CAB5003DDBE8 /* Project object */;
 }

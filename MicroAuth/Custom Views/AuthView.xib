@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AuthView" customModule="MicroAuth" customModuleProvider="target">
             <connections>
+                <outlet property="codeLabel" destination="G1K-65-wXm" id="Vkm-14-OfH"/>
                 <outlet property="contentView" destination="c22-O7-iKe" id="3tI-4i-AOq"/>
             </connections>
         </customObject>
@@ -16,12 +17,12 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="170"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdP-ZQ-IvH">
-                    <rect key="frame" x="96" y="77" width="59" height="16"/>
+                <textField verticalHuggingPriority="750" id="G1K-65-wXm">
+                    <rect key="frame" x="75" y="74" width="100" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Test Text" id="Cey-vp-KML">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="Code Here" id="cwO-e7-NdM">
                         <font key="font" usesAppearanceFont="YES"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>

@@ -33,6 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Add menu (designed in IB)
         if let menu = menu {
             statusItem?.menu = menu
+            menu.delegate = self
         }
         
         // Add instance of custom view to top of menu
@@ -44,3 +45,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 }
 
+extension AppDelegate: NSMenuDelegate {
+    // Start updating the codes whenever menu opens
+    func menuWillOpen(_ menu: NSMenu) {
+        authView?.startUpdating()
+    }
+    
+    // Stop updating the codes whenever menu closes
+    func menuDidClose(_ menu: NSMenu) {
+        authView?.stopUpdating()
+    }
+}
