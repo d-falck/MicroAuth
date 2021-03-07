@@ -16,16 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var firstMenuItem: NSMenuItem?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // All relevant code in awakeFromNib
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
         // Create status bar item and menu
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusItem?.button?.image = NSImage(named: "Icon")
@@ -43,6 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+    }
 }
 
 extension AppDelegate: NSMenuDelegate {

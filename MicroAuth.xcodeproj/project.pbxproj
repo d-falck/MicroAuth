@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120E6D5825F533F40053503E /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 120E6D5725F533F40053503E /* HotKey */; };
 		1232A2F025F3CAB5003DDBE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A2EF25F3CAB5003DDBE8 /* AppDelegate.swift */; };
 		1232A2F225F3CAB5003DDBE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A2F125F3CAB5003DDBE8 /* ViewController.swift */; };
 		1232A2F425F3CAB7003DDBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1232A2F325F3CAB7003DDBE8 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120E6D5825F533F40053503E /* HotKey in Frameworks */,
 				1232A32225F3E6DA003DDBE8 /* SwiftOTP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +99,7 @@
 			name = MicroAuth;
 			packageProductDependencies = (
 				1232A32125F3E6DA003DDBE8 /* SwiftOTP */,
+				120E6D5725F533F40053503E /* HotKey */,
 			);
 			productName = MicroAuth;
 			productReference = 1232A2EC25F3CAB5003DDBE8 /* MicroAuth.app */;
@@ -127,6 +130,7 @@
 			mainGroup = 1232A2E325F3CAB5003DDBE8;
 			packageReferences = (
 				1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+				120E6D5625F533F40053503E /* XCRemoteSwiftPackageReference "HotKey" */,
 			);
 			productRefGroup = 1232A2ED25F3CAB5003DDBE8 /* Products */;
 			projectDirPath = "";
@@ -352,6 +356,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		120E6D5625F533F40053503E /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 		1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lachlanbell/SwiftOTP";
@@ -363,6 +375,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		120E6D5725F533F40053503E /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 120E6D5625F533F40053503E /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
 		1232A32125F3E6DA003DDBE8 /* SwiftOTP */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */;
