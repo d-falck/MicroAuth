@@ -13,7 +13,7 @@ class AuthView: NSView {
     @IBOutlet weak var contentView: NSView! // Custom view created in Interface Builder
     @IBOutlet weak var codeLabel: NSTextField!
     
-    var totp: TOTP!
+    var totp: TOTP?
     var timer: Timer!
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,20 +27,21 @@ class AuthView: NSView {
     }
     
     // Initialisation code to be run for any constructor
-    func commonInit() {
+    private func commonInit() {
         // Load custom view from nib
         Bundle.main.loadNibNamed("AuthView", owner: self, topLevelObjects: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         
         // Set up authentication provider and get initial update
-        let secret = base32DecodeToData("ryqdmbsppkhryjdp")!
-        totp = TOTP(secret: secret, digits: 6, timeInterval: 30, algorithm: .sha1)
+        updateProvider()
         updateCode()
     }
     
     // Starts updating the code every 0.1s
     func startUpdating() {
+        updateProvider()
+        // Start updating the code every 0.1s
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateCode), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
     }
@@ -53,8 +54,19 @@ class AuthView: NSView {
     // Updates the current authentication code
     @objc func updateCode() {
         let now = Date()
-        if let code = totp.generate(time: now) {
+        if let code = totp?.generate(time: now) {
             self.codeLabel.stringValue = code
+        } else {
+            self.codeLabel.stringValue = "------"
+        }
+    }
+    
+    // Updates the authentication provider from saved secret in settings
+    private func updateProvider() {
+        if let secretString = UserDefaults.standard.string(forKey: "secret"), let secret = base32DecodeToData(secretString) {
+            totp = TOTP(secret: secret, digits: 6, timeInterval: 30, algorithm: .sha1)
+        } else {
+            totp = nil
         }
     }
     
@@ -77,3 +89,6 @@ class AuthView: NSView {
     }
     
 }
+
+// Secret: ryqdmbsppkhryjdp
+

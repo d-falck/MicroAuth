@@ -30,16 +30,16 @@
             </objects>
             <point key="canvasLocation" x="-386" y="314"/>
         </scene>
-        <!--View Controller-->
+        <!--Preferences View Controller-->
         <scene sceneID="kqG-wO-jUg">
             <objects>
-                <viewController id="N8J-ee-gSr" sceneMemberID="viewController">
+                <viewController id="N8J-ee-gSr" customClass="PreferencesViewController" customModule="MicroAuth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="DQo-xD-pZI">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-x8-QaP">
-                                <rect key="frame" x="192" y="124" width="96" height="21"/>
+                                <rect key="frame" x="189" y="126" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="E8o-bi-Q5Q">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -47,8 +47,33 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDP-AL-31S">
+                                <rect key="frame" x="296" y="43" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KtF-rg-fqP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="applySettings:" target="N8J-ee-gSr" id="dAc-9c-8RN"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40Z-Q9-EFb">
+                                <rect key="frame" x="185" y="43" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Zi-lD-2Fo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissPreferences:" target="N8J-ee-gSr" id="mDM-lc-XL4"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="secretField" destination="mtf-x8-QaP" id="Ymf-1f-wcL"/>
+                    </connections>
                 </viewController>
                 <customObject id="nzk-Ac-Mdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
