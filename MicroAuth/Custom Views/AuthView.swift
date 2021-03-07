@@ -89,6 +89,3 @@ class AuthView: NSView {
     }
     
 }
-
-// Secret: ryqdmbsppkhryjdp
-
