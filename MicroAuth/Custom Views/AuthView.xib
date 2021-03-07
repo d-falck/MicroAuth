@@ -7,27 +7,53 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AuthView" customModule="MicroAuth" customModuleProvider="target">
             <connections>
-                <outlet property="codeLabel" destination="G1K-65-wXm" id="Vkm-14-OfH"/>
+                <outlet property="codeLabel" destination="586-rf-hLV" id="jjZ-5J-c5u"/>
                 <outlet property="contentView" destination="c22-O7-iKe" id="3tI-4i-AOq"/>
+                <outlet property="copyButton" destination="AVq-sD-shS" id="4Db-mi-oCa"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="170"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="52"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="G1K-65-wXm">
-                    <rect key="frame" x="75" y="74" width="100" height="22"/>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVq-sD-shS">
+                    <rect key="frame" x="172" y="9" width="66" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" alignment="center" title="Code Here" id="cwO-e7-NdM">
-                        <font key="font" usesAppearanceFont="YES"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                    <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="79o-pp-cw0">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="copyButtonClicked:" target="-2" id="ubX-dJ-0c8"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="586-rf-hLV">
+                    <rect key="frame" x="18" y="16" width="70" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="000000" id="XjB-Cj-r8n">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="-191.5" y="114.5"/>
+            <point key="canvasLocation" x="-191.5" y="55"/>
         </customView>
+        <menu id="DQU-hL-sdF">
+            <items>
+                <menuItem title="Item 1" id="haj-XD-0gD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Item 2" id="WdZ-4N-lSf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Item 3" id="Uh7-vh-QvE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-526" y="134"/>
+        </menu>
     </objects>
 </document>

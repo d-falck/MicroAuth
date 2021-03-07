@@ -28,6 +28,7 @@ class AuthView: NSView {
     
     // Initialisation code to be run for any constructor
     func commonInit() {
+        // Load custom view from nib
         Bundle.main.loadNibNamed("AuthView", owner: self, topLevelObjects: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
@@ -62,5 +63,17 @@ class AuthView: NSView {
         self.updateCode()
         return self.codeLabel.stringValue
     }
-
+    
+    // Copy code to clipboard
+    func copyCode() {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(getCode(), forType: .string)
+    }
+    
+    // Run when copy button pressed
+    @IBAction func copyButtonClicked(_ sender: Any) {
+        copyCode()
+    }
+    
 }
