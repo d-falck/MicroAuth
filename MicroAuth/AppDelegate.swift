@@ -6,12 +6,14 @@
 //
 
 import Cocoa
+import HotKey
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var authView: AuthView?
+    var hotKey: HotKey?
     @IBOutlet weak var menu: NSMenu?
     @IBOutlet weak var firstMenuItem: NSMenuItem?
 
@@ -31,10 +33,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let item = firstMenuItem {
             item.view = authView
         }
+        
+        // Add copy hotkey
+        hotKey = HotKey(key: .r, modifiers: [.command, .option])
+        hotKey?.keyDownHandler = {
+            self.authView?.copyCode()
+            self.performPaste()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+    
+    func performPaste() {
+        let src = CGEventSource(stateID: .privateState)
+        
+        let cmdDown = CGEvent(keyboardEventSource: src, virtualKey: 0x37, keyDown: true)
+        let cmdUp = CGEvent(keyboardEventSource: src, virtualKey: 0x37, keyDown: false)
+        let vDown = CGEvent(keyboardEventSource: src, virtualKey: 0x09, keyDown: true)
+        let vUp = CGEvent(keyboardEventSource: src, virtualKey: 0x09, keyDown: false)
+        
+        vDown?.flags = CGEventFlags.maskCommand
+        
+        let loc = CGEventTapLocation.cghidEventTap
+        
+        cmdDown?.post(tap: loc)
+        vDown?.post(tap: loc)
+        cmdUp?.post(tap: loc)
+        vUp?.post(tap: loc)
     }
 }
 
