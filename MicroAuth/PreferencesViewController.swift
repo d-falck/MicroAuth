@@ -31,7 +31,7 @@ class PreferencesViewController: NSViewController {
         super.viewDidLoad()
         
         // Get current secret from settings
-        secretField.placeholderString = "Secret"
+        secretField.placeholderString = "e.g. rygdnbsapkyryldp"
         if let secret = UserDefaults.standard.string(forKey: "secret") {
             secretField.stringValue = secret
         }

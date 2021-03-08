@@ -34,12 +34,12 @@
         <scene sceneID="kqG-wO-jUg">
             <objects>
                 <viewController id="N8J-ee-gSr" customClass="PreferencesViewController" customModule="MicroAuth" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="DQo-xD-pZI">
-                        <rect key="frame" x="0.0" y="0.0" width="404" height="219"/>
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="DQo-xD-pZI">
+                        <rect key="frame" x="0.0" y="0.0" width="539" height="205"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-x8-QaP">
-                                <rect key="frame" x="133" y="159" width="184" height="21"/>
+                                <rect key="frame" x="218" y="152" width="184" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="E8o-bi-Q5Q">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -47,50 +47,26 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ExB-vt-nxg">
-                                <rect key="frame" x="143" y="28" width="118" height="20"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="40Z-Q9-EFb">
-                                        <rect key="frame" x="-7" y="-7" width="69" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Zi-lD-2Fo">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="dismissPreferences:" target="N8J-ee-gSr" id="mDM-lc-XL4"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SDP-AL-31S">
-                                        <rect key="frame" x="56" y="-7" width="69" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KtF-rg-fqP">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                            <connections>
-                                                <action selector="applySettings:" target="N8J-ee-gSr" id="dAc-9c-8RN"/>
-                                            </connections>
-                                        </buttonCell>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUZ-HU-Jgz">
-                                <rect key="frame" x="83" y="162" width="44" height="16"/>
+                                <rect key="frame" x="124" y="155" width="72" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Secret" id="snm-yN-n3d">
-                                    <font key="font" metaFont="system"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Secret key:" id="snm-yN-n3d">
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-lH-iEv">
+                                <rect key="frame" x="75" y="110" width="121" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Keyboard shortcut:" id="2iP-T1-vOc">
+                                    <font key="font" metaFont="systemBold" size="12"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-d1-jfu">
-                                <rect key="frame" x="110" y="93" width="109" height="32"/>
+                                <rect key="frame" x="211" y="100" width="134" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Set shortcut" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gld-bx-NQI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -101,7 +77,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMV-2p-huA">
-                                <rect key="frame" x="218" y="93" width="66" height="32"/>
+                                <rect key="frame" x="343" y="100" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hjO-66-Lmr">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -111,6 +87,64 @@
                                     <action selector="clearShortcut:" target="N8J-ee-gSr" id="x6d-ET-VOJ"/>
                                 </connections>
                             </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-Qi-7Ki" customClass="InfoButton" customModule="MicroAuth" customModuleProvider="target">
+                                <rect key="frame" x="422" y="105" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showOnHover" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animatePopover" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="content" value="This keyboard shortcut will fetch a current authentication code and paste it into the active application."/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fillMode" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40Z-Q9-EFb">
+                                <rect key="frame" x="390" y="13" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Zi-lD-2Fo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissPreferences:" target="N8J-ee-gSr" id="mDM-lc-XL4"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDP-AL-31S">
+                                <rect key="frame" x="457" y="13" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KtF-rg-fqP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                    <connections>
+                                        <action selector="applySettings:" target="N8J-ee-gSr" id="dAc-9c-8RN"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-mN-HHy">
+                                <rect key="frame" x="0.0" y="58" width="539" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByG-qd-nJQ">
+                                <rect key="frame" x="18" y="23" width="128" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="MicroAuth — © D. Falck" id="t52-QH-xII">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-Fa-lwm" customClass="InfoButton" customModule="MicroAuth" customModuleProvider="target">
+                                <rect key="frame" x="422" y="153" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showOnHover" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animatePopover" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="content" value="Given to you by your organisation or service."/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fillMode" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
@@ -121,7 +155,7 @@
                 </viewController>
                 <customObject id="nzk-Ac-Mdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339" y="423.5"/>
+            <point key="canvasLocation" x="396.5" y="416.5"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
