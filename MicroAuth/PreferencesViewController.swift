@@ -64,6 +64,10 @@ class PreferencesViewController: NSViewController {
             UserDefaults.standard.removeObject(forKey: "shortcut")
         }
         
+        // Force hotkey update
+        let appDelegate: AppDelegate? = NSApplication.shared.delegate as? AppDelegate
+        appDelegate?.updateHotkey()
+        
         dismissPreferences(self)
     }
     
