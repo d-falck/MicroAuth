@@ -11,8 +11,21 @@ class PreferencesViewController: NSViewController {
 
     @IBOutlet weak var secretField: NSTextField!
     @IBOutlet weak var shortcutButton: NSButton!
+    @IBOutlet weak var clearButton: NSButton!
     var shortcut: KeyboardShortcut?
-    var listening = false
+    var listening = false {
+        didSet {
+            if listening {
+                DispatchQueue.main.async { [weak self] in
+                    self?.shortcutButton.highlight(true)
+                }
+            } else {
+                DispatchQueue.main.async { [weak self] in
+                    self?.shortcutButton.highlight(false)
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +42,10 @@ class PreferencesViewController: NSViewController {
         }
         if let shortcut = self.shortcut {
             shortcutButton.title = shortcut.description
+            clearButton.isEnabled = true
         } else {
-            shortcutButton.title = ""
+            shortcutButton.title = "Set shortcut"
+            clearButton.isEnabled = false
         }
     }
 
@@ -59,20 +74,19 @@ class PreferencesViewController: NSViewController {
     // Listen for new shortcut to save
     @IBAction func setShortcut(_ sender: Any) {
         listening = true
-        shortcutButton.highlight(true)
         view.window?.makeFirstResponder(nil)
     }
     
     // Clear current set shortcut
     @IBAction func clearShortcut(_ sender: Any) {
         shortcut = nil
-        shortcutButton.title = ""
+        shortcutButton.title = "Set shortcut"
+        clearButton.isEnabled = false
     }
     
     // New shortcut input
     func updateShortcut(_ event: NSEvent) {
         listening = false
-        shortcutButton.highlight(false)
         if let characters = event.charactersIgnoringModifiers {
             let newShortcut = KeyboardShortcut(
                 function: event.modifierFlags.contains(.function),
@@ -86,6 +100,7 @@ class PreferencesViewController: NSViewController {
                 keyCode: UInt32(event.keyCode))
             self.shortcut = newShortcut
             shortcutButton.title = shortcut!.description
+            clearButton.isEnabled = true
         }
     }
     
