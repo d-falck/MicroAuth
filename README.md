@@ -1,3 +1,6 @@
+![Screenshot 1](https://github.com/d-falck/MicroAuth/blob/f8b79804d3621b43a484bb28de68da84f855ae26/Screenshots/Screenshot%202021-03-08%20at%2021.34.48.png)
+![Screenshot 2](https://github.com/d-falck/MicroAuth/blob/f8b79804d3621b43a484bb28de68da84f855ae26/Screenshots/Screenshot%202021-03-08%20at%2021.35.20.png)
+
 # MicroAuth
 **A tiny authenticator that lives in the menu bar and on your keys**
 
