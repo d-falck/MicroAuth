@@ -7,6 +7,10 @@ MiniAuth is multi-factor authentication client for macOS that sits in the menu b
 
 Just download the installer [here](https://github.com/d-falck/MicroAuth/releases/download/1.0/MicroAuth_1.0_Installer.dmg).
 
+## Tips
+
+Add MicroAuth to your login items so it starts up every time you start up your computer! To do this just go to `System Preferences -> Users & Groups -> Login items` and click the plus button.
+
 ## To do
 - Implement multiple authentication code functionality
 - Store secret key more securely
