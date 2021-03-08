@@ -15,6 +15,8 @@
 		1232A31B25F3DD79003DDBE8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A31A25F3DD79003DDBE8 /* AuthView.swift */; };
 		1232A31E25F3DD89003DDBE8 /* AuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1232A31D25F3DD89003DDBE8 /* AuthView.xib */; };
 		1232A32225F3E6DA003DDBE8 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = 1232A32125F3E6DA003DDBE8 /* SwiftOTP */; };
+		12CB3ED325F6874900537F59 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB3ED225F6874900537F59 /* PreferencesWindowController.swift */; };
+		12CB3ED625F6886500537F59 /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB3ED525F6886500537F59 /* KeyboardShortcut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		1232A2F925F3CAB7003DDBE8 /* MicroAuth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MicroAuth.entitlements; sourceTree = "<group>"; };
 		1232A31A25F3DD79003DDBE8 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		1232A31D25F3DD89003DDBE8 /* AuthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthView.xib; sourceTree = "<group>"; };
+		12CB3ED225F6874900537F59 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		12CB3ED525F6886500537F59 /* KeyboardShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,10 @@
 				1232A31825F3DBFE003DDBE8 /* Custom Views */,
 				1232A2EF25F3CAB5003DDBE8 /* AppDelegate.swift */,
 				1232A2F125F3CAB5003DDBE8 /* PreferencesViewController.swift */,
+				12CB3ED525F6886500537F59 /* KeyboardShortcut.swift */,
 				1232A2F325F3CAB7003DDBE8 /* Assets.xcassets */,
 				1232A2F525F3CAB7003DDBE8 /* Main.storyboard */,
+				12CB3ED225F6874900537F59 /* PreferencesWindowController.swift */,
 				1232A2F825F3CAB7003DDBE8 /* Info.plist */,
 				1232A2F925F3CAB7003DDBE8 /* MicroAuth.entitlements */,
 			);
@@ -161,6 +167,8 @@
 			files = (
 				1232A2F225F3CAB5003DDBE8 /* PreferencesViewController.swift in Sources */,
 				1232A2F025F3CAB5003DDBE8 /* AppDelegate.swift in Sources */,
+				12CB3ED625F6886500537F59 /* KeyboardShortcut.swift in Sources */,
+				12CB3ED325F6874900537F59 /* PreferencesWindowController.swift in Sources */,
 				1232A31B25F3DD79003DDBE8 /* AuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

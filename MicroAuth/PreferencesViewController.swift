@@ -10,33 +10,84 @@ import Cocoa
 class PreferencesViewController: NSViewController {
 
     @IBOutlet weak var secretField: NSTextField!
+    @IBOutlet weak var shortcutButton: NSButton!
+    var shortcut: KeyboardShortcut?
+    var listening = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Get current secret from settings
         secretField.placeholderString = "Secret"
         if let secret = UserDefaults.standard.string(forKey: "secret") {
             secretField.stringValue = secret
         }
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+        
+        // Get current keyboard shortcut from settings and show on button
+        if let data = UserDefaults.standard.data(forKey: "shortcut"), let shortcut = try? JSONDecoder().decode(KeyboardShortcut.self, from: data) {
+            self.shortcut = shortcut
+        }
+        if let shortcut = self.shortcut {
+            shortcutButton.title = shortcut.description
+        } else {
+            shortcutButton.title = ""
         }
     }
 
     @IBAction func applySettings(_ sender: Any) {
+        // Save secret
         if secretField.stringValue == "" {
             UserDefaults.standard.removeObject(forKey: "secret")
         } else {
             UserDefaults.standard.set(secretField.stringValue, forKey: "secret")
         }
+        
+        // Save keyboard shortcut
+        if let shortcut = self.shortcut, let data = try? JSONEncoder().encode(shortcut) {
+            UserDefaults.standard.set(data, forKey: "shortcut")
+        } else {
+            UserDefaults.standard.removeObject(forKey: "shortcut")
+        }
+        
         dismissPreferences(self)
     }
     
     @IBAction func dismissPreferences(_ sender: Any) {
         self.view.window?.performClose(self)
     }
+    
+    // Listen for new shortcut to save
+    @IBAction func setShortcut(_ sender: Any) {
+        listening = true
+        shortcutButton.highlight(true)
+        view.window?.makeFirstResponder(nil)
+    }
+    
+    // Clear current set shortcut
+    @IBAction func clearShortcut(_ sender: Any) {
+        shortcut = nil
+        shortcutButton.title = ""
+    }
+    
+    // New shortcut input
+    func updateShortcut(_ event: NSEvent) {
+        listening = false
+        shortcutButton.highlight(false)
+        if let characters = event.charactersIgnoringModifiers {
+            let newShortcut = KeyboardShortcut(
+                function: event.modifierFlags.contains(.function),
+                control: event.modifierFlags.contains(.control),
+                command: event.modifierFlags.contains(.command),
+                shift: event.modifierFlags.contains(.shift),
+                option: event.modifierFlags.contains(.option),
+                capsLock: event.modifierFlags.contains(.capsLock),
+                carbonFlags: event.modifierFlags.carbonFlags,
+                characters: characters,
+                keyCode: UInt32(event.keyCode))
+            self.shortcut = newShortcut
+            shortcutButton.title = shortcut!.description
+        }
+    }
+    
 }
 
