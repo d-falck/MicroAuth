@@ -5,7 +5,7 @@ MiniAuth is multi-factor authentication client for macOS that sits in the menu b
 
 ## Installation
 
-FILL IN
+Just download the installer [here](https://github.com/d-falck/MicroAuth/releases/download/1.0/MicroAuth_1.0_Installer.dmg).
 
 ## To do
 - Implement multiple authentication code functionality
