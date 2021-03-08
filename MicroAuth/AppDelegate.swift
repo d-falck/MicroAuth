@@ -7,13 +7,14 @@
 
 import Cocoa
 import HotKey
+import Carbon
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var authView: AuthView?
-    var hotKey: HotKey?
+    private var hotKey: HotKey?
     @IBOutlet weak var menu: NSMenu?
     @IBOutlet weak var firstMenuItem: NSMenuItem?
 
@@ -35,17 +36,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         // Add copy hotkey
-        hotKey = HotKey(key: .r, modifiers: [.command, .option])
-        hotKey?.keyDownHandler = {
-            self.authView?.copyCode()
-            self.performPaste()
-        }
+        updateHotkey()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     
+    // Pastes the current code into active application using Cmd-V
     func performPaste() {
         let src = CGEventSource(stateID: .privateState)
         
@@ -63,16 +61,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         cmdUp?.post(tap: loc)
         vUp?.post(tap: loc)
     }
+    
+    // Updates the hotkey from settings file
+    func updateHotkey() {
+        // Get chosen shortcut from settings
+        if let data = UserDefaults.standard.data(forKey: "shortcut"), let shortcut = try? JSONDecoder().decode(KeyboardShortcut.self, from: data) {
+            hotKey = HotKey(keyCombo: KeyCombo(carbonKeyCode: shortcut.keyCode, carbonModifiers: shortcut.carbonFlags))
+            hotKey!.keyDownHandler = { [weak self] in
+                self?.authView?.copyCode()
+                self?.performPaste()
+            }
+        } else {
+            hotKey = nil
+        }
+        
+        
+    }
 }
 
 extension AppDelegate: NSMenuDelegate {
     // Start updating the codes whenever menu opens
     func menuWillOpen(_ menu: NSMenu) {
+        updateHotkey()
         authView?.startUpdating()
     }
     
     // Stop updating the codes whenever menu closes
     func menuDidClose(_ menu: NSMenu) {
+        updateHotkey()
         authView?.stopUpdating()
     }
 }
