@@ -10,7 +10,7 @@
             <objects>
                 <windowController id="UzB-7U-XZe" customClass="PreferencesWindowController" customModule="MicroAuth" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="MicroAuth Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="6qE-w1-ADb">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" texturedBackground="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <rect key="contentRect" x="851" y="704" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
                         <view key="contentView" id="qhn-Ma-coU">

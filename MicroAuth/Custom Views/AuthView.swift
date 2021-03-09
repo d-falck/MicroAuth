@@ -12,9 +12,15 @@ class AuthView: NSView {
     
     @IBOutlet weak var contentView: NSView! // Custom view created in Interface Builder
     @IBOutlet weak var codeLabel: NSTextField!
+    @IBOutlet weak var progressBar: NSProgressIndicator!
     
-    var totp: TOTP?
-    var timer: Timer!
+    private var totp: TOTP?
+    private var timer: Timer!
+    private var timeToRenew: Double! {
+        didSet {
+            progressBar.doubleValue = timeToRenew
+        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -33,7 +39,12 @@ class AuthView: NSView {
         addSubview(contentView)
         contentView.frame = self.bounds
         
+        // Set up progress bar bounds
+        progressBar.minValue = 0.0
+        progressBar.maxValue = 30.0
+        
         // Set up authentication provider and get initial update
+        calculateTimeToRenew()
         updateProvider()
         updateCode()
     }
@@ -42,7 +53,7 @@ class AuthView: NSView {
     func startUpdating() {
         updateProvider()
         // Start updating the code every 0.1s
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateCode), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
     }
     
@@ -52,13 +63,27 @@ class AuthView: NSView {
     }
     
     // Updates the current authentication code
-    @objc func updateCode() {
+    func updateCode() {
         let now = Date()
         if let code = totp?.generate(time: now) {
             self.codeLabel.stringValue = code
         } else {
             self.codeLabel.stringValue = "------"
         }
+    }
+    
+    // Update progress bar and potentially the code
+    @objc func update() {
+        calculateTimeToRenew()
+        if timeToRenew <= 5.0 {
+            updateCode()
+        }
+    }
+    
+    // Calculates seconds to next code
+    private func calculateTimeToRenew() {
+        let unixTime: Double = Date().timeIntervalSince1970
+        timeToRenew = ceil(unixTime/30.0)*30.0 - unixTime
     }
     
     // Updates the authentication provider from saved secret in settings
