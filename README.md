@@ -15,5 +15,7 @@ Add MicroAuth to your login items so it starts up every time you start up your c
 
 ## To do
 - Implement multiple authentication code functionality
+- Add interface with browser for even faster workflow
 - Store secret key more securely
+- Add auto update functionality
 
