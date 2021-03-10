@@ -6,14 +6,17 @@
 //
 
 import Cocoa
+import LaunchAtLogin
 
 class PreferencesViewController: NSViewController {
-
+    
     @IBOutlet weak var secretField: NSTextField!
     @IBOutlet weak var shortcutButton: NSButton!
     @IBOutlet weak var clearButton: NSButton!
     @IBOutlet weak var applyButton: NSButton!
     @IBOutlet weak var countdownCheckbox: NSButton!
+    @IBOutlet weak var launchAtLoginCheckbox: NSButton!
+    
     
     var shortcut: KeyboardShortcut?
     var listening = false {
@@ -58,6 +61,13 @@ class PreferencesViewController: NSViewController {
         } else {
             countdownCheckbox.state = .on
         }
+        
+        // Get current login launch on/off setting
+        if LaunchAtLogin.isEnabled {
+            launchAtLoginCheckbox.state = .on
+        } else {
+            launchAtLoginCheckbox.state = .off
+        }
 
     }
     
@@ -85,6 +95,9 @@ class PreferencesViewController: NSViewController {
         
         // Save countdown on/off
         UserDefaults.standard.set((countdownCheckbox.state == .off), forKey: "hideCountdown")
+        
+        // Save login launch setting
+        LaunchAtLogin.isEnabled = (launchAtLoginCheckbox.state == .on)
         
         // Force hotkey update
         let appDelegate: AppDelegate? = NSApplication.shared.delegate as? AppDelegate

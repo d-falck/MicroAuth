@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		120E6D5825F533F40053503E /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 120E6D5725F533F40053503E /* HotKey */; };
+		120FA05625F95DE0000AF540 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 120FA05525F95DE0000AF540 /* LaunchAtLogin */; };
 		122044BF25F91489000512AC /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122044BE25F91489000512AC /* ProgressCircle.swift */; };
 		1232A2F025F3CAB5003DDBE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A2EF25F3CAB5003DDBE8 /* AppDelegate.swift */; };
 		1232A2F225F3CAB5003DDBE8 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1232A2F125F3CAB5003DDBE8 /* PreferencesViewController.swift */; };
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120FA05625F95DE0000AF540 /* LaunchAtLogin in Frameworks */,
 				120E6D5825F533F40053503E /* HotKey in Frameworks */,
 				1232A32225F3E6DA003DDBE8 /* SwiftOTP in Frameworks */,
 			);
@@ -103,6 +105,7 @@
 				1232A2E825F3CAB5003DDBE8 /* Sources */,
 				1232A2E925F3CAB5003DDBE8 /* Frameworks */,
 				1232A2EA25F3CAB5003DDBE8 /* Resources */,
+				1251E18F25F968E900DB6B68 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -112,6 +115,7 @@
 			packageProductDependencies = (
 				1232A32125F3E6DA003DDBE8 /* SwiftOTP */,
 				120E6D5725F533F40053503E /* HotKey */,
+				120FA05525F95DE0000AF540 /* LaunchAtLogin */,
 			);
 			productName = MicroAuth;
 			productReference = 1232A2EC25F3CAB5003DDBE8 /* MicroAuth.app */;
@@ -143,6 +147,7 @@
 			packageReferences = (
 				1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
 				120E6D5625F533F40053503E /* XCRemoteSwiftPackageReference "HotKey" */,
+				120FA05425F95DE0000AF540 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
 			productRefGroup = 1232A2ED25F3CAB5003DDBE8 /* Products */;
 			projectDirPath = "";
@@ -165,6 +170,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1251E18F25F968E900DB6B68 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1232A2E825F3CAB5003DDBE8 /* Sources */ = {
@@ -326,7 +351,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dfalck.MicroAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -350,7 +375,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dfalck.MicroAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -390,6 +415,14 @@
 				minimumVersion = 0.1.3;
 			};
 		};
+		120FA05425F95DE0000AF540 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		1232A32025F3E6DA003DDBE8 /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lachlanbell/SwiftOTP";
@@ -405,6 +438,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 120E6D5625F533F40053503E /* XCRemoteSwiftPackageReference "HotKey" */;
 			productName = HotKey;
+		};
+		120FA05525F95DE0000AF540 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 120FA05425F95DE0000AF540 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
 		};
 		1232A32125F3E6DA003DDBE8 /* SwiftOTP */ = {
 			isa = XCSwiftPackageProductDependency;
