@@ -83,7 +83,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showOnHover" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animatePopover" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="content" value="This keyboard shortcut will fetch a current authentication code and paste it into the active application."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="content" value="This keyboard shortcut will fetch a current authentication code and paste it into the active application."/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="fillMode" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </customView>
