@@ -30,7 +30,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="586-rf-hLV">
-                    <rect key="frame" x="18" y="16" width="70" height="21"/>
+                    <rect key="frame" x="18" y="15" width="70" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="000000" id="XjB-Cj-r8n">
                         <font key="font" metaFont="system" size="18"/>
@@ -38,12 +38,12 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <progressIndicator fixedFrame="YES" maxValue="100" doubleValue="65" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-zf-aBg">
-                    <rect key="frame" x="124" y="18" width="16" height="16"/>
+                <progressIndicator fixedFrame="YES" maxValue="30" doubleValue="30" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-zf-aBg">
+                    <rect key="frame" x="116" y="16" width="30" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </progressIndicator>
             </subviews>
-            <point key="canvasLocation" x="-191.5" y="55"/>
+            <point key="canvasLocation" x="-192" y="55"/>
         </customView>
         <menu id="DQU-hL-sdF">
             <items>

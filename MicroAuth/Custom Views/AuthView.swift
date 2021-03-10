@@ -40,26 +40,31 @@ class AuthView: NSView {
         contentView.frame = self.bounds
         
         // Set up progress bar bounds
-        progressBar.minValue = 0.0
-        progressBar.maxValue = 30.0
+        progressBar.controlTint = NSControlTint.blueControlTint
+        //progressBar.usesThreadedAnimation = true
         
         // Set up authentication provider and get initial update
-        calculateTimeToRenew()
         updateProvider()
-        updateCode()
+        updateView()
     }
     
-    // Starts updating the code every 0.1s
+    // Starts updating the code every 0.01s
     func startUpdating() {
         updateProvider()
-        // Start updating the code every 0.1s
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        // Start updating the code every 0.01s
+        timer = Timer(timeInterval: 0.01, target: self, selector: #selector(updateView), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
     }
     
     // Stops continuously updating the code
     func stopUpdating() {
         timer?.invalidate()
+    }
+    
+    // Update progress bar and potentially the code
+    @objc func updateView() {
+        updateTimeToRenew() // TODO: avoid calculating these *both* unless necessary
+        updateCode()
     }
     
     // Updates the current authentication code
@@ -72,18 +77,10 @@ class AuthView: NSView {
         }
     }
     
-    // Update progress bar and potentially the code
-    @objc func update() {
-        calculateTimeToRenew()
-        if timeToRenew <= 5.0 {
-            updateCode()
-        }
-    }
-    
     // Calculates seconds to next code
-    private func calculateTimeToRenew() {
+    private func updateTimeToRenew() {
         let unixTime: Double = Date().timeIntervalSince1970
-        timeToRenew = ceil(unixTime/30.0)*30.0 - unixTime
+        self.timeToRenew = ceil(unixTime/30.0)*30.0 - unixTime
     }
     
     // Updates the authentication provider from saved secret in settings
