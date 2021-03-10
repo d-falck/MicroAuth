@@ -7,18 +7,22 @@
 
 import Cocoa
 import SwiftOTP
+import SwiftUI
 
 class AuthView: NSView {
     
     @IBOutlet weak var contentView: NSView! // Custom view created in Interface Builder
     @IBOutlet weak var codeLabel: NSTextField!
-    @IBOutlet weak var progressBar: NSProgressIndicator!
+    
+    @IBOutlet weak var progressCircleView: NSView!
+    private var progressCircle: ProgressCircle!
+    private var progress = Progress(value: CGFloat(1.0))
     
     private var totp: TOTP?
     private var timer: Timer!
     private var timeToRenew: Double! {
         didSet {
-            progressBar.doubleValue = timeToRenew
+            progress.value = CGFloat(timeToRenew/30.0)
         }
     }
     
@@ -39,9 +43,11 @@ class AuthView: NSView {
         addSubview(contentView)
         contentView.frame = self.bounds
         
-        // Set up progress bar bounds
-        progressBar.controlTint = NSControlTint.blueControlTint
-        //progressBar.usesThreadedAnimation = true
+        // Set up progress circle
+        progressCircle = ProgressCircle(progress: progress)
+        let hostingView = NSHostingView(rootView: progressCircle)
+        hostingView.setFrameSize(NSSize(width: 35.0, height: 35.0))
+        progressCircleView.addSubview(hostingView)
         
         // Set up authentication provider and get initial update
         updateProvider()
@@ -52,7 +58,7 @@ class AuthView: NSView {
     // Run when the view is shown
     func startUpdating() {
         // Show/hide progress bar based on settings
-        progressBar.isHidden = UserDefaults.standard.bool(forKey: "hideCountdown")
+        progressCircleView.isHidden = UserDefaults.standard.bool(forKey: "hideCountdown")
         
         // Update authentication provider
         updateProvider()

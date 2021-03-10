@@ -9,17 +9,30 @@
             <connections>
                 <outlet property="codeLabel" destination="586-rf-hLV" id="jjZ-5J-c5u"/>
                 <outlet property="contentView" destination="c22-O7-iKe" id="3tI-4i-AOq"/>
-                <outlet property="progressBar" destination="RX8-zf-aBg" id="nqn-yT-2dW"/>
+                <outlet property="progressCircleView" destination="88M-3k-qG2" id="68h-iW-NIe"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="62"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="586-rf-hLV">
+                    <rect key="frame" x="18" y="14" width="70" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="000000" id="XjB-Cj-r8n">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88M-3k-qG2">
+                    <rect key="frame" x="113" y="7" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVq-sD-shS">
-                    <rect key="frame" x="171" y="13" width="66" height="32"/>
+                    <rect key="frame" x="171" y="8" width="66" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="79o-pp-cw0">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -29,35 +42,8 @@
                         <action selector="copyButtonClicked:" target="-2" id="ubX-dJ-0c8"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="586-rf-hLV">
-                    <rect key="frame" x="18" y="19" width="70" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="000000" id="XjB-Cj-r8n">
-                        <font key="font" metaFont="system" size="18"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="30" doubleValue="30" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-zf-aBg">
-                    <rect key="frame" x="113" y="14" width="32" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </progressIndicator>
             </subviews>
-            <point key="canvasLocation" x="-192" y="60"/>
+            <point key="canvasLocation" x="73" y="95"/>
         </customView>
-        <menu id="DQU-hL-sdF">
-            <items>
-                <menuItem title="Item 1" id="haj-XD-0gD">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="Item 2" id="WdZ-4N-lSf">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="Item 3" id="Uh7-vh-QvE">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-            </items>
-            <point key="canvasLocation" x="-526" y="134"/>
-        </menu>
     </objects>
 </document>
