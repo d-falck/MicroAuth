@@ -18,6 +18,5 @@ Add MicroAuth to your login items so it starts up every time you start up your c
 - Add interface with browser for even faster workflow
 - Store secret key more securely
 - Add auto update functionality
-- Improve countdown bar (change to circle?)
 - Implement 'add to login items' functionality
 
