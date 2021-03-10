@@ -108,6 +108,7 @@ class PreferencesViewController: NSViewController {
         shortcut = nil
         shortcutButton.title = "Set shortcut"
         clearButton.isEnabled = false
+        listening = false
     }
     
     // New shortcut input
