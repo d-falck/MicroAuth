@@ -198,6 +198,33 @@ DQ
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Edit" id="ehD-64-gGT">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="YGh-pa-msz">
+                                    <items>
+                                        <menuItem title="Cut" keyEquivalent="x" id="nlD-c5-cAJ">
+                                            <connections>
+                                                <action selector="cut:" target="Ady-hI-5gd" id="Ida-CF-jBF"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy" keyEquivalent="c" id="KLY-qB-R8K">
+                                            <connections>
+                                                <action selector="copy:" target="Ady-hI-5gd" id="EQA-cq-sm3"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="0Uu-u3-ih2">
+                                            <connections>
+                                                <action selector="paste:" target="Ady-hI-5gd" id="lET-AZ-ySY"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="FHH-hv-jGA">
+                                            <connections>
+                                                <action selector="selectAll:" target="Ady-hI-5gd" id="65K-rG-bsQ"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -210,6 +237,19 @@ DQ
                         <outlet property="menu" destination="uQy-DD-JDr" id="ZqV-el-uHQ"/>
                     </connections>
                 </customObject>
+                <menu id="PWy-3S-ORz">
+                    <items>
+                        <menuItem title="Item 1" id="II3-ia-soP">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 2" id="aQL-Jx-EMC">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Item 3" id="wO0-HQ-5lP">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
