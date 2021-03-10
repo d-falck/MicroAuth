@@ -15,11 +15,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="250" height="52"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVq-sD-shS">
-                    <rect key="frame" x="172" y="9" width="66" height="32"/>
+                    <rect key="frame" x="171" y="13" width="66" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="79o-pp-cw0">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -30,7 +30,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="586-rf-hLV">
-                    <rect key="frame" x="18" y="15" width="70" height="21"/>
+                    <rect key="frame" x="18" y="19" width="70" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="000000" id="XjB-Cj-r8n">
                         <font key="font" metaFont="system" size="18"/>
@@ -38,12 +38,12 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <progressIndicator fixedFrame="YES" maxValue="30" doubleValue="30" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-zf-aBg">
-                    <rect key="frame" x="116" y="16" width="30" height="20"/>
+                <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="30" doubleValue="30" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-zf-aBg">
+                    <rect key="frame" x="113" y="14" width="32" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </progressIndicator>
             </subviews>
-            <point key="canvasLocation" x="-192" y="55"/>
+            <point key="canvasLocation" x="-192" y="60"/>
         </customView>
         <menu id="DQU-hL-sdF">
             <items>

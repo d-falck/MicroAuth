@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         // Add instance of custom view to top of menu
-        authView = AuthView(frame: NSRect(x: 0.0, y: 0.0, width: 250.0, height: 52.0))
+        authView = AuthView(frame: NSRect(x: 0.0, y: 0.0, width: 250.0, height: 62.0))
         if let item = firstMenuItem {
             item.view = authView
         }

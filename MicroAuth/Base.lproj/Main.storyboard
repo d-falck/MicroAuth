@@ -113,9 +113,6 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="toggleCountdown:" target="N8J-ee-gSr" id="x0p-Vk-vNf"/>
-                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40Z-Q9-EFb">
                                 <rect key="frame" x="390" y="13" width="69" height="32"/>
