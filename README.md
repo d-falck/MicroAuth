@@ -9,6 +9,10 @@ MicroAuth is multi-factor authentication client for macOS that sits in the menu 
 
 Just download the installer [here](https://github.com/d-falck/MicroAuth/releases/download/v1.4/MicroAuth_1.4_Installer.dmg).
 
+## Credit
+
+Many thanks to Freddie Rawlins and Kieran Ross for their ideas and assistance.
+
 ## To do
 - Implement multiple authentication code functionality
 - Add interface with browser for even faster workflow
