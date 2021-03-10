@@ -12,6 +12,9 @@ class PreferencesViewController: NSViewController {
     @IBOutlet weak var secretField: NSTextField!
     @IBOutlet weak var shortcutButton: NSButton!
     @IBOutlet weak var clearButton: NSButton!
+    @IBOutlet weak var applyButton: NSButton!
+    @IBOutlet weak var countdownCheckbox: NSButton!
+    
     var shortcut: KeyboardShortcut?
     var listening = false {
         didSet {
@@ -47,6 +50,22 @@ class PreferencesViewController: NSViewController {
             shortcutButton.title = "Set shortcut"
             clearButton.isEnabled = false
         }
+        
+        // Get current countdown on/off setting
+        let countdownHidden = UserDefaults.standard.bool(forKey: "hideCountdown")
+        if countdownHidden {
+            countdownCheckbox.state = .off
+        } else {
+            countdownCheckbox.state = .on
+        }
+
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        // Focus on apply button initially
+        self.view.window?.initialFirstResponder = applyButton
     }
 
     @IBAction func applySettings(_ sender: Any) {
@@ -64,6 +83,9 @@ class PreferencesViewController: NSViewController {
             UserDefaults.standard.removeObject(forKey: "shortcut")
         }
         
+        // Save countdown on/off
+        UserDefaults.standard.set((countdownCheckbox.state == .off), forKey: "hideCountdown")
+        
         // Force hotkey update
         let appDelegate: AppDelegate? = NSApplication.shared.delegate as? AppDelegate
         appDelegate?.updateHotkey()
@@ -78,7 +100,7 @@ class PreferencesViewController: NSViewController {
     // Listen for new shortcut to save
     @IBAction func setShortcut(_ sender: Any) {
         listening = true
-        view.window?.makeFirstResponder(nil)
+        self.view.window?.makeFirstResponder(nil)
     }
     
     // Clear current set shortcut

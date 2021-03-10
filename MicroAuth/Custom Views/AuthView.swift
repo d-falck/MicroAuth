@@ -46,12 +46,18 @@ class AuthView: NSView {
         // Set up authentication provider and get initial update
         updateProvider()
         updateView()
+        
     }
     
-    // Starts updating the code every 0.01s
+    // Run when the view is shown
     func startUpdating() {
+        // Show/hide progress bar based on settings
+        progressBar.isHidden = UserDefaults.standard.bool(forKey: "hideCountdown")
+        
+        // Update authentication provider
         updateProvider()
-        // Start updating the code every 0.01s
+        
+        // Start updating the code and progress bar every 0.01s
         timer = Timer(timeInterval: 0.01, target: self, selector: #selector(updateView), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
     }
