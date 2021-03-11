@@ -9,6 +9,12 @@ MicroAuth is customisable multi-factor authentication client for macOS that sits
 
 Just download the installer [here](https://github.com/d-falck/MicroAuth/releases/download/v1.7/MicroAuth_1.7_Installer.dmg).
 
+Note that the first time you launch MicroAuth you'll have to right-click the app and click 'Open' to bypass Apple's security (it costs me £99 to get apps signed by Apple to avoid this problem).
+
+## Usage
+
+When you use your configured keyboard shortcut in any application, MicroAuth will get a current authentication code and paste it into whatever text field your cursor is in. Alternatively, you can manually view and copy the current code from the MicroAuth icon in the menu bar, where you can also access preferences.
+
 ## Requirements
 
 Requires macOS version 10.15 (Catalina) or later.
@@ -25,3 +31,7 @@ Thanks are due to Freddie Rawlins and Kieran Ross for their ideas and help.
 ## Comments/suggestions
 
 Create an issue or email me at damon.falck@worc.ox.ac.uk.
+
+## Licence
+
+This software is provided under the GNU General Public License v3.0, which in particular means you must disclose the source when reusing this code and use the same licence. No warranty is provided.
