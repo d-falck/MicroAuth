@@ -15,7 +15,7 @@ Requires macOS version 10.15 (Catalina) or later.
 
 ## Credit
 
-Many thanks to Freddie Rawlins and Kieran Ross for their ideas and assistance.
+Thanks are due to Freddie Rawlins and Kieran Ross for their ideas and help.
 
 ## To do
 - Implement multiple authentication code functionality
