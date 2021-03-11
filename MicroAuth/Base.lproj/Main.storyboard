@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +28,7 @@
                 </windowController>
                 <customObject id="ojP-Tm-fcy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="322"/>
+            <point key="canvasLocation" x="-256" y="340"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="kqG-wO-jUg">
@@ -195,12 +196,84 @@ DQ
                         <outlet property="launchAtLoginCheckbox" destination="ooU-Eb-iQv" id="DwM-zX-jPS"/>
                         <outlet property="secretField" destination="mtf-x8-QaP" id="Ymf-1f-wcL"/>
                         <outlet property="shortcutButton" destination="vDY-d1-jfu" id="4ZC-6h-L26"/>
+                        <segue destination="uco-Ee-OtN" kind="show" identifier="showFinishedSetup" id="MDi-AK-Ais"/>
                     </connections>
                 </viewController>
                 <customObject id="nzk-Ac-Mdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="SJV-wc-L1b" customClass="SUUpdater"/>
             </objects>
             <point key="canvasLocation" x="396.5" y="479"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="QAf-Pt-JSX">
+            <objects>
+                <windowController id="uco-Ee-OtN" sceneMemberID="viewController">
+                    <window key="window" title="MicroAuth" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="XfU-09-i1l">
+                        <windowStyleMask key="styleMask" titled="YES"/>
+                        <rect key="contentRect" x="425" y="462" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+                        <view key="contentView" id="gol-k7-9jN">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="uco-Ee-OtN" id="9Ab-Kt-Tox"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="hrC-NR-3ls" kind="relationship" relationship="window.shadowedContentViewController" id="1px-0N-eei"/>
+                    </connections>
+                </windowController>
+                <customObject id="nRh-sl-fay" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="1001"/>
+        </scene>
+        <!--Setup Done View Controller-->
+        <scene sceneID="Sww-OV-O0p">
+            <objects>
+                <viewController id="hrC-NR-3ls" customClass="SetupDoneViewController" customModule="MicroAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="bid-Fd-yPx">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="158"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12R-ng-wRI">
+                                <rect key="frame" x="167" y="119" width="61" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="All done!" id="uUf-1U-oHn">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtC-BZ-csi">
+                                <rect key="frame" x="163" y="13" width="70" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Finish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ddV-KQ-jGK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pressedFinish:" target="hrC-NR-3ls" id="NfT-4K-aY4"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCK-Q0-Vgw">
+                                <rect key="frame" x="42" y="59" width="312" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="You can view these settings again at any time by clicking 'Preferences' in the MicroAuth menu." id="Tgz-d2-Hgt">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="x9v-g0-KGk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="960"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
@@ -288,5 +361,82 @@ DQ
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="RHT-US-hzp">
+            <objects>
+                <windowController storyboardIdentifier="welcomeWC" id="wB1-F9-R5N" sceneMemberID="viewController">
+                    <window key="window" title="MicroAuth" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="vaH-kW-HQo">
+                        <windowStyleMask key="styleMask" titled="YES"/>
+                        <rect key="contentRect" x="425" y="462" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+                        <view key="contentView" id="8Wx-98-hIq">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="wB1-F9-R5N" id="4ui-Eb-lmH"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="gde-fB-tnX" kind="relationship" relationship="window.shadowedContentViewController" id="2x8-8U-Y1w"/>
+                    </connections>
+                </windowController>
+                <customObject id="tYm-ez-hOY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="-218"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="keK-Be-fAb">
+            <objects>
+                <viewController id="gde-fB-tnX" customClass="WelcomeViewController" customModule="MicroAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="yij-c8-Xp5">
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="134"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nax-UH-798">
+                                <rect key="frame" x="65" y="93" width="204" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to MicroAuth!" id="0lY-Ua-gM1">
+                                    <font key="font" metaFont="systemBold" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n09-Nw-uI0">
+                                <rect key="frame" x="116" y="60" width="102" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Let's get set up." id="1q0-Gd-alT">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azp-55-kTy">
+                                <rect key="frame" x="123" y="13" width="89" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gs3-T8-9Dh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="continuePressed:" target="gde-fB-tnX" id="MFL-9X-hmc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <segue destination="UzB-7U-XZe" kind="show" identifier="showPreferences" id="jZ2-R3-oaa"/>
+                    </connections>
+                </viewController>
+                <customObject id="LpX-Rc-gEe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-946" y="263"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jZ2-R3-oaa"/>
+    </inferredMetricsTieBreakers>
 </document>

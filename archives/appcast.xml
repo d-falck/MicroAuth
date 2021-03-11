@@ -3,6 +3,22 @@
     <channel>
         <title>MicroAuth</title>
         <item>
+            <title>Version 1.7</title>
+            <description><![CDATA[
+                <h2>Changes:</h2>
+                <ul>
+                    <li> Added welcome screen and setup on first launch</li>
+                </ul>
+            ]]>
+            </description>
+            <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.7_Installer.dmg"
+                sparkle:version="8"
+                sparkle:shortVersionString="1.7"
+                sparkle:edSignature="HiHDVasBHLvKJvEvwi9MYQTvHssaYwne3aRcPVUXZGieuEDwF3Z1yDc/fpZG1budUdJKRYgmgT3DJPbA6N/ACA=="
+                length="2135987"
+                type="application/octet-stream"/>
+        </item>
+        <item>
             <title>Version 1.6</title>
             <description><![CDATA[
                 <h2>Changes:</h2>
@@ -20,7 +36,7 @@
                 type="application/octet-stream"/>
         </item>
         <item>
-            <title>1.5</title>
+            <title>Version 1.5</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.5_Installer.dmg"
                 sparkle:version="6"
                 sparkle:shortVersionString="1.5"
@@ -29,7 +45,7 @@
                 type="application/octet-stream"/>
         </item>
         <item>
-            <title>1.4</title>
+            <title>Version 1.4</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.4_Installer.dmg"
                 sparkle:version="5"
                 sparkle:shortVersionString="1.4"
@@ -38,7 +54,7 @@
                 type="application/octet-stream"/>
         </item>
         <item>
-            <title>1.3</title>
+            <title>Version 1.3</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.3_Installer.dmg"
                 sparkle:version="4"
                 sparkle:shortVersionString="1.3"
@@ -47,7 +63,7 @@
                 type="application/octet-stream"/>
         </item>
         <item>
-            <title>1.2</title>
+            <title>Version 1.2</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.2_Installer.dmg"
                 sparkle:version="3"
                 sparkle:shortVersionString="1.2"
@@ -56,7 +72,7 @@
                 type="application/octet-stream"/>
         </item>
         <item>
-            <title>1.1</title>
+            <title>Version 1.1</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.1_Installer.dmg"
                 sparkle:version="2"
                 sparkle:shortVersionString="1.1"

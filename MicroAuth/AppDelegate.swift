@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var hotKey: HotKey?
     @IBOutlet weak var menu: NSMenu?
     @IBOutlet weak var firstMenuItem: NSMenuItem?
+    private var welcomeScreen: NSWindowController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create status bar item and menu
@@ -37,6 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Add copy hotkey
         updateHotkey()
+        
+        // Potentially show welcome screen
+        showWelcomeScreen()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -74,8 +78,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             hotKey = nil
         }
-        
-        
+    }
+    
+    // Show welcome screen on first launch
+    func showWelcomeScreen() {
+        if (!UserDefaults.standard.bool(forKey: "launchedBefore")) {
+            let storyboard = NSStoryboard(name: "Main", bundle: nil)
+            welcomeScreen = storyboard.instantiateController(withIdentifier: "welcomeWC") as? NSWindowController
+            welcomeScreen?.showWindow(self)
+            NSApp.activate(ignoringOtherApps: true) // Bring window to front
+        }
     }
 }
 

@@ -120,6 +120,7 @@ class PreferencesViewController: NSViewController {
     }
     
     @IBAction func dismissPreferences(_ sender: Any) {
+        maybeShowPopup()
         self.view.window?.performClose(self)
     }
     
@@ -163,6 +164,14 @@ class PreferencesViewController: NSViewController {
             colourCircleCheckbox.isEnabled = true
         } else {
             colourCircleCheckbox.isEnabled = false
+        }
+    }
+    
+    // Show popup if first launch
+    func maybeShowPopup() {
+        if !UserDefaults.standard.bool(forKey: "launchedBefore") {
+            performSegue(withIdentifier: "showFinishedSetup", sender: self)
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
     }
     
