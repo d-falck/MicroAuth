@@ -15,8 +15,8 @@ class PreferencesViewController: NSViewController {
     @IBOutlet weak var clearButton: NSButton!
     @IBOutlet weak var applyButton: NSButton!
     @IBOutlet weak var countdownCheckbox: NSButton!
+    @IBOutlet weak var colourCircleCheckbox: NSButton!
     @IBOutlet weak var launchAtLoginCheckbox: NSButton!
-    
     
     var shortcut: KeyboardShortcut?
     var listening = false {
@@ -58,8 +58,18 @@ class PreferencesViewController: NSViewController {
         let countdownHidden = UserDefaults.standard.bool(forKey: "hideCountdown")
         if countdownHidden {
             countdownCheckbox.state = .off
+            colourCircleCheckbox.isEnabled = false
         } else {
             countdownCheckbox.state = .on
+            colourCircleCheckbox.isEnabled = true
+        }
+        
+        // Get current circle colour setting
+        let monochromeCircle = UserDefaults.standard.bool(forKey: "monochromeCircle")
+        if monochromeCircle {
+            colourCircleCheckbox.state = .off
+        } else {
+            colourCircleCheckbox.state = .on
         }
         
         // Get current login launch on/off setting
@@ -95,6 +105,9 @@ class PreferencesViewController: NSViewController {
         
         // Save countdown on/off
         UserDefaults.standard.set((countdownCheckbox.state == .off), forKey: "hideCountdown")
+        
+        // Save countdown colour
+        UserDefaults.standard.set((colourCircleCheckbox.state == .off), forKey: "monochromeCircle")
         
         // Save login launch setting
         LaunchAtLogin.isEnabled = (launchAtLoginCheckbox.state == .on)
@@ -141,6 +154,15 @@ class PreferencesViewController: NSViewController {
             self.shortcut = newShortcut
             shortcutButton.title = shortcut!.description
             clearButton.isEnabled = true
+        }
+    }
+    
+    // Activate/deactivate circle colour checkbox based on countdown circle checkbox state
+    @IBAction func onToggleCountdown(_ sender: Any) {
+        if countdownCheckbox.state == .on {
+            colourCircleCheckbox.isEnabled = true
+        } else {
+            colourCircleCheckbox.isEnabled = false
         }
     }
     

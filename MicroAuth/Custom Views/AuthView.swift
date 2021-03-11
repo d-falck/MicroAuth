@@ -16,13 +16,13 @@ class AuthView: NSView {
     
     @IBOutlet weak var progressCircleView: NSView!
     private var progressCircle: ProgressCircle!
-    private var progress = Progress(value: CGFloat(1.0))
+    private var circleOptions = CircleOptions(progress: CGFloat(1.0), monochrome: false)
     
     private var totp: TOTP?
     private var timer: Timer!
     private var timeToRenew: Double! {
         didSet {
-            progress.value = CGFloat(timeToRenew/30.0)
+            circleOptions.progress = CGFloat(timeToRenew/30.0)
         }
     }
     
@@ -44,7 +44,7 @@ class AuthView: NSView {
         contentView.frame = self.bounds
         
         // Set up progress circle
-        progressCircle = ProgressCircle(progress: progress)
+        progressCircle = ProgressCircle(options: circleOptions)
         let hostingView = NSHostingView(rootView: progressCircle)
         hostingView.setFrameSize(NSSize(width: 35.0, height: 35.0))
         progressCircleView.addSubview(hostingView)
@@ -57,8 +57,9 @@ class AuthView: NSView {
     
     // Run when the view is shown
     func startUpdating() {
-        // Show/hide progress bar based on settings
+        // Alter progress circle appearance based on settings
         progressCircleView.isHidden = UserDefaults.standard.bool(forKey: "hideCountdown")
+        circleOptions.monochrome = UserDefaults.standard.bool(forKey: "monochromeCircle")
         
         // Update authentication provider
         updateProvider()

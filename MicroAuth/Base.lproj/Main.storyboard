@@ -34,11 +34,11 @@
             <objects>
                 <viewController id="N8J-ee-gSr" customClass="PreferencesViewController" customModule="MicroAuth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="DQo-xD-pZI">
-                        <rect key="frame" x="0.0" y="0.0" width="539" height="305"/>
+                        <rect key="frame" x="0.0" y="0.0" width="539" height="330"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-x8-QaP">
-                                <rect key="frame" x="218" y="252" width="184" height="21"/>
+                                <rect key="frame" x="218" y="277" width="184" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="E8o-bi-Q5Q">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -47,7 +47,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUZ-HU-Jgz">
-                                <rect key="frame" x="124" y="255" width="72" height="15"/>
+                                <rect key="frame" x="124" y="280" width="72" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Secret key:" id="snm-yN-n3d">
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -56,7 +56,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-d1-jfu">
-                                <rect key="frame" x="211" y="200" width="134" height="32"/>
+                                <rect key="frame" x="211" y="225" width="134" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Set shortcut" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gld-bx-NQI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMV-2p-huA">
-                                <rect key="frame" x="343" y="200" width="66" height="32"/>
+                                <rect key="frame" x="343" y="225" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hjO-66-Lmr">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -78,17 +78,20 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-Qi-7Ki" customClass="InfoButton" customModule="MicroAuth" customModuleProvider="target">
-                                <rect key="frame" x="422" y="208" width="20" height="20"/>
+                                <rect key="frame" x="422" y="233" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showOnHover" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animatePopover" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="content" value="This keyboard shortcut will fetch a current authentication code and paste it into the active application."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="content">
+                                        <string key="value">This keyboard shortcut will fetch a current authentication
+code and paste it into the active application.</string>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="fillMode" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-Fa-lwm" customClass="InfoButton" customModule="MicroAuth" customModuleProvider="target">
-                                <rect key="frame" x="422" y="253" width="20" height="20"/>
+                                <rect key="frame" x="422" y="278" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showOnHover" value="YES"/>
@@ -98,7 +101,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-lH-iEv">
-                                <rect key="frame" x="75" y="209" width="121" height="15"/>
+                                <rect key="frame" x="75" y="234" width="121" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Keyboard shortcut:" id="2iP-T1-vOc">
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -107,17 +110,28 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XdW-oJ-YyM">
-                                <rect key="frame" x="216" y="163" width="167" height="18"/>
+                                <rect key="frame" x="216" y="188" width="167" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Show countdown circle" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MQK-vf-DaP">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onToggleCountdown:" target="N8J-ee-gSr" id="N17-Fj-r1V"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ooU-Eb-iQv">
-                                <rect key="frame" x="216" y="137" width="122" height="18"/>
+                                <rect key="frame" x="216" y="138" width="122" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Launch on login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="295-k4-S1t">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-Jw-bCo">
+                                <rect key="frame" x="216" y="163" width="188" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Colour in countdown circle" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JdV-cS-ao0">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -176,6 +190,7 @@ DQ
                     <connections>
                         <outlet property="applyButton" destination="SDP-AL-31S" id="09D-89-3UD"/>
                         <outlet property="clearButton" destination="pMV-2p-huA" id="4Zh-dl-V0V"/>
+                        <outlet property="colourCircleCheckbox" destination="j6Z-Jw-bCo" id="vcz-Xl-WlZ"/>
                         <outlet property="countdownCheckbox" destination="XdW-oJ-YyM" id="I0J-SE-rV3"/>
                         <outlet property="launchAtLoginCheckbox" destination="ooU-Eb-iQv" id="DwM-zX-jPS"/>
                         <outlet property="secretField" destination="mtf-x8-QaP" id="Ymf-1f-wcL"/>
@@ -185,7 +200,7 @@ DQ
                 <customObject id="nzk-Ac-Mdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="SJV-wc-L1b" customClass="SUUpdater"/>
             </objects>
-            <point key="canvasLocation" x="396.5" y="466.5"/>
+            <point key="canvasLocation" x="396.5" y="479"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">

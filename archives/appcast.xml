@@ -3,6 +3,23 @@
     <channel>
         <title>MicroAuth</title>
         <item>
+            <title>Version 1.6</title>
+            <description><![CDATA[
+                <h2>Changes:</h2>
+                <ul>
+                    <li> Added option to turn off accent colour in countdown circle and have monochrome look instead</li>
+                    <li> Minor bug fixes </li>
+                </ul>
+            ]]>
+            </description>
+            <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.6_Installer.dmg"
+                sparkle:version="7"
+                sparkle:shortVersionString="1.6"
+                sparkle:edSignature="p4B06/bOeKSnTgDKpHqpi232X7nmR4XaUmMAk3Si+0fZ5XzKBFbwhGLrO/A/CkmVZb4R8+cUMcx1d/99zhMkCQ=="
+                length="2125059"
+                type="application/octet-stream"/>
+        </item>
+        <item>
             <title>1.5</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.5_Installer.dmg"
                 sparkle:version="6"
