@@ -8,7 +8,7 @@
             <sparkle:minimumSystemVersion>11.1</sparkle:minimumSystemVersion>
             <enclosure url="MicroAuth_1.1_Installer.dmg" sparkle:version="2" sparkle:shortVersionString="1.1" length="1325744" type="application/octet-stream"/>
             <sparkle:deltas>
-                <enclosure url="//MicroAuth2-1.delta" sparkle:version="2" sparkle:shortVersionString="1.1" sparkle:deltaFrom="1" length="125613" type="application/octet-stream" sparkle:edSignature="+DdIsVsVjk6q9ePvVeAfBkFFbqxL/b3M6rOccMBNer1vBzk0/FVDfAypWWd6R57cGAkbwszW0/ANTjIKtxsTCg=="/>
+                <enclosure url="//MicroAuth2-1.delta" sparkle:version="2" sparkle:shortVersionString="1.1" sparkle:deltaFrom="1" length="126001" type="application/octet-stream" sparkle:edSignature="jUTkvcxoRnHvdXFASo3nEx4mwYHhE02NwCeGDXeC6PQlaU5pBRWRD/Z1QcT6TzjeaNibXexSheaGlH0w5hndAA=="/>
             </sparkle:deltas>
         </item>
         <item>
