@@ -5,15 +5,17 @@
         <item>
             <title>1.5</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.5_Installer.dmg"
-                sparkle:version="1.5"
-                sparkle:edSignature="FJO0BQOy/tEUzLhq5FV8z1o+MYy3CuD8cB0Zk56A5KAegBANUwrX5oL1slisM2yBiPWgFULNUHzAyyIGcrbQCQ=="
-                length="2123362"
+                sparkle:version="6"
+                sparkle:shortVersionString="1.5"
+                sparkle:edSignature="c6xaD9MiYAh1EX9VPChfKU5GvoKbzkkr4OhiixJ7Y8QwFXRNlYE7uUGdn867Copa7UfCRqoirE9bw7aHshmVDQ=="
+                length="2123336"
                 type="application/octet-stream"/>
         </item>
         <item>
             <title>1.4</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.4_Installer.dmg"
-                sparkle:version="1.4"
+                sparkle:version="5"
+                sparkle:shortVersionString="1.4"
                 sparkle:edSignature="YyR2yEVHDBjy12JG8IMQmksb7SusBtRbGJNQ6pTBrHtSR4GKxRzuwJSW3K9QPsLD50Yek0tR61C6TK4PDo1PDA=="
                 length="1370491"
                 type="application/octet-stream"/>
@@ -21,7 +23,8 @@
         <item>
             <title>1.3</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.3_Installer.dmg"
-                sparkle:version="1.3"
+                sparkle:version="4"
+                sparkle:shortVersionString="1.3"
                 sparkle:edSignature="hscxOfaPjWCLbvCnipEbxCM0a6bgEPr2IrsrOus2hMa6kEiUI3UDBFwCHZrRB6Flhur5OMjQPhGJOicMDIefBw=="
                 length="1339302"
                 type="application/octet-stream"/>
@@ -29,7 +32,8 @@
         <item>
             <title>1.2</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.2_Installer.dmg"
-                sparkle:version="1.2"
+                sparkle:version="3"
+                sparkle:shortVersionString="1.2"
                 sparkle:edSignature="Jst+zghV6htG4h09IdPYPgB0BNf6UGnFZA+HlR59chtj/MLKdIOqA4Kh80SwQ1MFdIG54nSnhPBRNi0szALHAg=="
                 length="1330051"
                 type="application/octet-stream"/>
@@ -37,7 +41,8 @@
         <item>
             <title>1.1</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.1_Installer.dmg"
-                sparkle:version="1.1"
+                sparkle:version="2"
+                sparkle:shortVersionString="1.1"
                 sparkle:edSignature="JLCZ3w+XBsaoukaQGG3Cp5WMMkQJVvB7jakn+83xXWxaOdlOnfaVRh93xoxUzPEuweRpHtAG1WuIAO7WyqIRAw=="
                 length="1325744"
                 type="application/octet-stream"/>
@@ -45,7 +50,8 @@
         <item>
             <title>1.0</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.4_Installer.dmg"
-                sparkle:version="1.0"
+                sparkle:version="1"
+                sparkle:shortVersionString="1.0"
                 sparkle:edSignature="Dvitq/XA7ogOTNghRDSyciN1MmZy8FkttL/9vvaSs7iw/Pe7kus/2mEGSV273/qP9hiwmzjdbBRlKmZmtFBWBQ=="
                 length="1313523"
                 type="application/octet-stream"/>
