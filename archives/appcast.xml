@@ -5,8 +5,8 @@
         <item>
             <title>1.5</title>
             <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.5_Installer.dmg"
-                sparkle:version="1.5 (1)"
-                sparkle:shortVersionString="1.5 (1)"
+                sparkle:version="1.5"
+                sparkle:shortVersionString="1.5"
                 sparkle:edSignature="FJO0BQOy/tEUzLhq5FV8z1o+MYy3CuD8cB0Zk56A5KAegBANUwrX5oL1slisM2yBiPWgFULNUHzAyyIGcrbQCQ=="
                 length="2123362"
                 type="application/octet-stream"/>
