@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>MicroAuth</title>
+        <item>
+            <title>1.1</title>
+            <pubDate>Tue, 09 Mar 2021 13:41:36 +0000</pubDate>
+            <sparkle:minimumSystemVersion>11.1</sparkle:minimumSystemVersion>
+            <enclosure url="MicroAuth_1.1_Installer.dmg" sparkle:version="2" sparkle:shortVersionString="1.1" length="1325744" type="application/octet-stream"/>
+            <sparkle:deltas>
+                <enclosure url="//MicroAuth2-1.delta" sparkle:version="2" sparkle:shortVersionString="1.1" sparkle:deltaFrom="1" length="125613" type="application/octet-stream" sparkle:edSignature="+DdIsVsVjk6q9ePvVeAfBkFFbqxL/b3M6rOccMBNer1vBzk0/FVDfAypWWd6R57cGAkbwszW0/ANTjIKtxsTCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>1.4</title>
+            <pubDate>Wed, 10 Mar 2021 20:55:27 +0000</pubDate>
+            <sparkle:minimumSystemVersion>11.1</sparkle:minimumSystemVersion>
+            <enclosure url="MicroAuth_1.4_Installer.dmg" sparkle:version="2" sparkle:shortVersionString="1.4" length="1370491" type="application/octet-stream"/>
+        </item>
+        <item>
+            <title>1.2</title>
+            <pubDate>Wed, 10 Mar 2021 01:50:33 +0000</pubDate>
+            <sparkle:minimumSystemVersion>11.1</sparkle:minimumSystemVersion>
+            <enclosure url="MicroAuth_1.2_Installer.dmg" sparkle:version="1" sparkle:shortVersionString="1.2" length="1330051" type="application/octet-stream"/>
+        </item>
+        <item>
+            <title>1.0</title>
+            <pubDate>Mon, 08 Mar 2021 21:22:09 +0000</pubDate>
+            <sparkle:minimumSystemVersion>11.1</sparkle:minimumSystemVersion>
+            <enclosure url="MicroAuth_1.0_Installer.dmg" sparkle:version="1" sparkle:shortVersionString="1.0" length="1313523" type="application/octet-stream"/>
+        </item>
+        <item>
+            <title>1.3</title>
+            <pubDate>Wed, 10 Mar 2021 16:27:27 +0000</pubDate>
+            <sparkle:minimumSystemVersion>11.1</sparkle:minimumSystemVersion>
+            <enclosure url="MicroAuth_1.3_Installer.dmg" sparkle:version="1" sparkle:shortVersionString="1.3" length="1339302" type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
