@@ -1,9 +1,9 @@
 # MicroAuth
-**A tiny authenticator that lives in the menu bar and on your keys**
+**A tiny authenticator that lives in the menu bar and in a customisable keyboard shortcut**
 
-![Screenshot 1](https://github.com/d-falck/MicroAuth/blob/f8b79804d3621b43a484bb28de68da84f855ae26/Screenshots/Screenshot%202021-03-08%20at%2021.34.48.png)
+![Screenshot 1](https://github.com/d-falck/MicroAuth/blob/e84ff49158deec80cdafc677799fa5b3c0b48739/Screenshots/Screenshot%202021-03-11%20at%2011.25.40.png)
 
-MicroAuth is multi-factor authentication client for macOS that sits in the menu bar, easily accessible and out of your way, and lets you paste a current authentication code into any application with a single, configurable, keyboard shortcut.
+MicroAuth is customisable multi-factor authentication client for macOS that sits in the menu bar, easily accessible and out of your way, and lets you paste a current authentication code into any application with a single, configurable, keyboard shortcut.
 
 ## Installation
 
@@ -21,3 +21,7 @@ Many thanks to Freddie Rawlins and Kieran Ross for their ideas and assistance.
 - Implement multiple authentication code functionality
 - Add interface with browser for even faster workflow
 - Store secret key more securely
+
+## Comments/suggestions
+
+Create an issue or email me at damon.falck@worc.ox.ac.uk.
