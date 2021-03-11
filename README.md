@@ -17,5 +17,5 @@ Many thanks to Freddie Rawlins and Kieran Ross for their ideas and assistance.
 - Implement multiple authentication code functionality
 - Add interface with browser for even faster workflow
 - Store secret key more securely
-- Add auto update functionality
+- Add option to change highlight status of countdown bar
 
