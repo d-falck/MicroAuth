@@ -34,6 +34,7 @@ Thanks are due to Freddie Rawlins and Kieran Ross for their ideas and help.
 - Implement multiple authentication code functionality
 - Add interface with browser for even faster workflow
 - Store secret key more securely
+- Make Windows version?
 
 ## Comments/suggestions
 
