@@ -1,4 +1,7 @@
 # MicroAuth
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/d-falck/MicroAuth) ![GitHub all releases](https://img.shields.io/github/downloads/d-falck/MicroAuth/total) ![GitHub](https://img.shields.io/github/license/d-falck/MicroAuth) ![Platform](https://img.shields.io/badge/platform-macos-lightgrey) ![macOS version](https://img.shields.io/badge/macos-%3E%3D10.15-blue)
+
 **A tiny authenticator that lives in the menu bar and in a customisable keyboard shortcut**
 
 ![Screenshot 1](https://github.com/d-falck/MicroAuth/blob/e84ff49158deec80cdafc677799fa5b3c0b48739/Screenshots/Screenshot%202021-03-11%20at%2011.25.40.png)
