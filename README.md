@@ -12,7 +12,7 @@ MicroAuth is customisable multi-factor authentication client for macOS that sits
 
 Just download the installer [here](https://github.com/d-falck/MicroAuth/releases/download/v1.7/MicroAuth_1.7_Installer.dmg).
 
-Note that the first time you launch MicroAuth you'll have to right-click the app and click 'Open' to bypass Apple's security (it would cost me £99 to get apps signed by Apple to avoid this problem).
+Note that the first time you launch MicroAuth **you'll have to right-click the app and click 'Open'** to bypass Apple's security (it would cost me £99 to get apps signed by Apple to avoid this problem).
 
 ## Usage
 
