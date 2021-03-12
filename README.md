@@ -16,7 +16,7 @@ Note that the first time you launch MicroAuth **you'll have to right-click the a
 
 ## Setup
 
-Your organisation will provide you with a secret key which you copy into the app. For Oxford University members, you can get this by going to `https://mysignins.microsoft.com/security-info -> Add method -> Authenticator app -> I want to use a different authenticator app -> Next -> Can't scan image`.
+Your organisation will provide you with a secret key which you copy into the app. For Oxford University members, you can get this by going to `https://mysignins.microsoft.com/security-info -> Add method -> Authenticator app -> Add -> I want to use a different authenticator app -> Next -> Can't scan image`.
 
 ## Usage
 
