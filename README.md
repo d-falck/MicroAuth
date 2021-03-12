@@ -12,7 +12,11 @@ MicroAuth is customisable multi-factor authentication client for macOS that sits
 
 **Just download the installer [here](https://github.com/d-falck/MicroAuth/releases/download/v1.7/MicroAuth_1.7_Installer.dmg).**
 
-Note that the first time you launch MicroAuth **you'll have to right-click the app** (once it's in your Applications folder) **and click 'Open'** to bypass Apple's security (it would cost me £99 to get apps signed by Apple to avoid this problem).
+Note that the first time you launch MicroAuth **you'll have to right-click the app** (once it's in your Applications folder) **and click 'Open'** (and then Open again) to bypass Apple's security (it would cost me £99 to get apps signed by Apple to avoid this problem).
+
+## Setup
+
+Your organisation will provide you with a secret key which you copy into the app. For Oxford University members, you can get this by going to `https://mysignins.microsoft.com/security-info -> Add method -> Authenticator app -> I want to use a different authenticator app -> Next -> Can't scan image`.
 
 ## Usage
 
