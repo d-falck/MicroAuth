@@ -3,6 +3,23 @@
     <channel>
         <title>MicroAuth</title>
         <item>
+            <title>Version 1.8</title>
+            <description><![CDATA[
+                <h2>Changes:</h2>
+                <ul>
+                    <li> Now your clipboard content is no longer lost when you paste in a code!</li>
+                </ul>
+                Hope you guys are enjoying the app :) - Damon
+            ]]>
+            </description>
+            <enclosure url="https://raw.githubusercontent.com/d-falck/MicroAuth/main/archives/MicroAuth_1.8_Installer.dmg"
+                sparkle:version="9"
+                sparkle:shortVersionString="1.8"
+                sparkle:edSignature="yPU6z21oEZ4cRU49079Vx+4ef7ZbX4mPaif39ZmjpnebwpR7fvPlWs87sRJVmX3pJ3T/3A97fK5GMZ9Sb+/QBA=="
+                length="2136208"
+                type="application/octet-stream"/>
+        </item>
+        <item>
             <title>Version 1.7</title>
             <description><![CDATA[
                 <h2>Changes:</h2>
