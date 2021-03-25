@@ -72,8 +72,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let data = UserDefaults.standard.data(forKey: "shortcut"), let shortcut = try? JSONDecoder().decode(KeyboardShortcut.self, from: data) {
             hotKey = HotKey(keyCombo: KeyCombo(carbonKeyCode: shortcut.keyCode, carbonModifiers: shortcut.carbonFlags))
             hotKey!.keyDownHandler = { [weak self] in
+                let oldString = NSPasteboard.general.string(forType: .string)
                 self?.authView?.copyCode()
                 self?.performPaste()
+                Thread.sleep(forTimeInterval: 0.1)
+                if let str = oldString { // Restore old value to clipboard
+                    NSPasteboard.general.setString(str, forType: .string)
+                }
             }
         } else {
             hotKey = nil
